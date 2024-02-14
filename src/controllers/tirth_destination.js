@@ -3,7 +3,7 @@ import createError from 'http-errors';
 import db from '@/database';
 
 /**
- * POST /tirth_destination
+ * POST /destination
  * Create tirth destination request
  */
 export const createTirthDestination = async (req, res, next) => {
@@ -18,7 +18,7 @@ export const createTirthDestination = async (req, res, next) => {
 };
 
 /**
- * GET /tirth_destination/:id
+ * GET /destination/:id
  * Get tirth destination by id
  */
 export const getTirthDestinationById = async (req, res, next) => {
@@ -39,7 +39,7 @@ export const getTirthDestinationById = async (req, res, next) => {
 };
 
 /**
- * PUT /tirth_destination/:id
+ * PUT /destination/:id
  * Update tirth destination request
  */
 export const updateTirthDestination = async (req, res, next) => {
@@ -65,7 +65,7 @@ export const updateTirthDestination = async (req, res, next) => {
 };
 
 /**
- * DELETE /tirth_destination/:id
+ * DELETE /destination/:id
  * Delete tirth destination request
  */
 export const deleteTirthDestination = async (req, res, next) => {

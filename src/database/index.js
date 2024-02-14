@@ -6,6 +6,7 @@ import * as config from '@/config/sequelize';
 import userModel from './models/user';
 import tweetModel from './models/tweet';
 import tirthDestinationModel from './models/tirth_destination';
+import tirthTemplesModel from './models/tirth_temples';
 
 // Configuration
 const env = process.env.NODE_ENV;
@@ -19,6 +20,7 @@ const modelDefiners = [
   userModel,
   tweetModel,
   tirthDestinationModel,
+  tirthTemplesModel,
 ];
 
 // eslint-disable-next-line no-restricted-syntax
