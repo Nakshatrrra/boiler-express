@@ -25,7 +25,7 @@ export const getTirthTempleById = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    const tirthTemple = await db.models.tirth_temple
+    const tirthTemple = await db.models.tirth_temples
       .findByPk(id);
 
     if (!tirthTemple) {
@@ -46,7 +46,7 @@ export const updateTirthTemple = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    const [updated] = await db.models.tirth_temple
+    const [updated] = await db.models.tirth_temples
       .update(req.body, {
         where: { id },
       });
@@ -55,7 +55,7 @@ export const updateTirthTemple = async (req, res, next) => {
       return next(createError(404, 'There is no tirth temple with this id!'));
     }
 
-    const updatedTirthTemple = await db.models.tirth_temple
+    const updatedTirthTemple = await db.models.tirth_temples
       .findByPk(id);
 
     return res.status(200).json(updatedTirthTemple);
@@ -72,7 +72,7 @@ export const deleteTirthTemple = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    const deleted = await db.models.tirth_temple
+    const deleted = await db.models.tirth_temples
       .destroy({
         where: { id },
       });

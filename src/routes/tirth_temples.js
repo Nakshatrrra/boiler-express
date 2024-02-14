@@ -10,6 +10,7 @@ router.route('/')
   .post(isAuthenticated, validate(tirthTempleValidations.createTirthTempleRules), tirthTempleController.createTirthTemple);
 
 router.route('/:id')
+  .get(tirthTempleController.getTirthTempleById)
   .put(isAuthenticated, validate(tirthTempleValidations.updateTirthTempleRules), tirthTempleController.updateTirthTemple)
   .delete(isAuthenticated, tirthTempleController.deleteTirthTemple);
 

@@ -13,7 +13,7 @@ const defaultConfig = {
   host: DB_HOST,
   port: Number(DB_PORT),
   define: {
-    paranoid: true,
+    paranoid: false,
   },
 };
 
